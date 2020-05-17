@@ -1,0 +1,51 @@
+--CREATE DATABASE TravelGCLab17;
+
+--CREATE TABLE [User] (
+--Id INT PRIMARY KEY IDENTITY (10,10) NOT NULL,
+--FirstName NVARCHAR(25),
+--LastNight NVARCHAR(40) NOT NULL,
+--[Address] NVARCHAR(100),
+--PhoneNumber NVARCHAR(15),
+--Email NVARCHAR(50),
+--DOB DATE
+--);
+--CREATE TABLE Passport(
+--Id INT PRIMARY KEY IDENTITY (15,10) NOT NULL,
+--PassportNumber NVARCHAR(9),
+--ExpDate DATE,
+--[Address] NVARCHAR(100)
+--);
+--CREATE TABLE Trip(
+--Id INT PRIMARY KEY IDENTITY (1,1) NOT NULL,
+--Destination NVARCHAR(50),
+--Budget INT,
+--TravelMode NVARCHAR(20),
+--DepartureDate DATE,
+--ReturnDate DATE
+--);
+--CREATE TABLE Hotel(
+--Id INT PRIMARY KEY IDENTITY (100,1) NOT NULL,
+--[Name] NVARCHAR(30),
+--City NVARCHAR(25),
+--ContactName NVARCHAR(40),
+--ContactPhone NVARCHAR(15),
+--ContactEmail NVARCHAR(50),
+--CostPerNight DECIMAL,
+--CheckInDate DATE,
+--CheckOutDate DATE
+--);
+
+
+
+--ALTER TABLE [User] ADD PassportId INT FOREIGN KEY REFERENCES Passport(Id);
+--ALTER TABLE Passport ADD UserId INT FOREIGN KEY REFERENCES [User](Id);
+--ALTER TABLE Hotel ADD TripId INT FOREIGN KEY REFERENCES Trip(Id);
+
+--CREATE TABLE UserTrip(
+--Id INT PRIMARY KEY IDENTITY (8,10) NOT NULL,
+--);
+
+--ALTER TABLE UserTrip ADD UserId INT FOREIGN KEY REFERENCES [User](Id);
+--ALTER TABLE UserTrip ADD TripId INT FOREIGN KEY REFERENCES Trip(Id);
+
+
